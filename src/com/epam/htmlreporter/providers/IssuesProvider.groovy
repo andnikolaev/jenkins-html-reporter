@@ -44,11 +44,11 @@ public class IssuesProvider extends AbstractDataProvider {
     /**
      * Value of the field to get confirmed issues
      */
-    private static final String CONFIRMED = "false";
+    private static final String CONFIRMED = 'false';
     /**
      * Value of the field to get unconfirmed issues
      */
-    private static final String UNCONFIRMED = "true";
+    private static final String UNCONFIRMED = 'true';
 
     /**
      * Complete constructor.
@@ -84,7 +84,7 @@ public class IssuesProvider extends AbstractDataProvider {
 
     /**
      * Get issues depending on their resolved status
-     * @param confirmed equals "true" if Unconfirmed and "false" if confirmed
+     * @param confirmed equals 'true' if Unconfirmed and 'false' if confirmed
      * @return List containing all the issues
      * @throws BadSonarQubeRequestException A request is not recognized by the server
      * @throws SonarQubeException When SonarQube server is not callable.
@@ -156,7 +156,7 @@ public class IssuesProvider extends AbstractDataProvider {
         int inc = 0;
 
         // result to return
-        String language = "";
+        String language = '';
 
         // we iterate on the array until we find the good key
         while(again && inc < rules.length) {

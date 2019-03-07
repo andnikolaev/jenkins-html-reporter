@@ -78,9 +78,9 @@ public class Report {
      * Default constructor
      */
     public Report() {
-        this.projectName = "";
-        this.projectAuthor = "";
-        this.projectDate = "";
+        this.projectName = '';
+        this.projectAuthor = '';
+        this.projectDate = '';
         this.qualityProfiles = new ArrayList<>();
         this.qualityGate = new QualityGate();
         this.issues = new ArrayList<>();
@@ -259,7 +259,7 @@ public class Report {
         Language language;
         for(ProfileMetaData q : project.getQualityProfiles()) {
             language = project.getLanguage(q.getLanguage());
-            sb.append(q.getName()).append(" [").append(language.getName()).append("]; ");
+            sb.append(q.getName()).append(' [').append(language.getName()).append(']; ');
         }
 
         return sb.toString();
@@ -275,7 +275,7 @@ public class Report {
 
         // append each quality profile filename
         for(ProfileMetaData q : project.getQualityProfiles()) {
-            sb.append(q.getKey()).append(".json").append("; ");
+            sb.append(q.getKey()).append('.json').append('; ');
         }
 
         return sb.toString();

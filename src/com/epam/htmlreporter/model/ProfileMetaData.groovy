@@ -50,7 +50,7 @@ public class ProfileMetaData {
     /**
      * how many deprecated rules it contains
      */
-    @SerializedName("activeDeprecatedRuleCount")
+    @SerializedName('activeDeprecatedRuleCount')
     private int deprecatedRules;
 
     /**

@@ -34,7 +34,7 @@ public class LanguageProvider extends AbstractDataProvider {
     /**
      * Json's field containing the language's array
      */
-    private static final String LANGUAGES_FIELD = "languages";
+    private static final String LANGUAGES_FIELD = 'languages';
 
     /**
      * Map containing temporary memory of the data

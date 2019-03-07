@@ -35,7 +35,7 @@ public class SonarQubeInfoProvider extends AbstractDataProvider {
      * @param pToken String representing the user token.
      */
     public SonarQubeInfoProvider(final SonarQubeServer pServer, final String pToken) {
-        super(pServer, pToken, "");
+        super(pServer, pToken, '');
     }
 
     /**
@@ -50,7 +50,7 @@ public class SonarQubeInfoProvider extends AbstractDataProvider {
         final JsonObject jsonObject = request(String.format(getRequest(GET_SONARQUBE_INFO_REQUEST), getServer().getUrl()));
 
         // extract data from json object and return it
-        return jsonObject.get("version").getAsString();
+        return jsonObject.get('version').getAsString();
     }
 
     /**
@@ -66,9 +66,9 @@ public class SonarQubeInfoProvider extends AbstractDataProvider {
             final String request = String.format(getRequest(GET_SONARQUBE_INFO_REQUEST), getServer().getUrl());
             final JsonObject jsonObject = request(request);
             // extract data from json object and return it
-            status = jsonObject.get("status").getAsString();
+            status = jsonObject.get('status').getAsString();
         } catch (final Exception e) {
-            status = "DOWN";
+            status = 'DOWN';
             LOGGER.log(Level.SEVERE, e.getMessage(), e);
         }
         return status;

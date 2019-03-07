@@ -39,12 +39,12 @@ public class Comment {
      * Complete constructor.
      */
     public Comment(){
-        this.key = "";
-        this.login = "";
-        this.htmlText = "";
-        this.markdown = "";
+        this.key = '';
+        this.login = '';
+        this.htmlText = '';
+        this.markdown = '';
         this.updatable = false;
-        this.createdAt = "";
+        this.createdAt = '';
     }
 
     /**

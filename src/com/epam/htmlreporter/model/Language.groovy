@@ -30,8 +30,8 @@ public class Language {
      * Default constructor
      */
     public Language() {
-        this.key = "";
-        this.name = "";
+        this.key = '';
+        this.name = '';
     }
 
     /**

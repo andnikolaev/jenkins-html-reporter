@@ -48,22 +48,22 @@ public class CommandLineManager {
     private CommandLine commandLine;
 
     /** Option details for help. */
-    private static final String[][] OPTIONS_DEFINITION = {
-            {"h", "help", Boolean.FALSE.toString(), "Display this message."},
-            {"v", "version", Boolean.FALSE.toString(), "Display current version."},
-            {"s", "server", Boolean.TRUE.toString(), "Complete URL of the targeted SonarQube server."},
-            {"t", "token", Boolean.TRUE.toString(), "SonarQube token of the SonarQube user who has permissions on the project."},
-            {"p", "project", Boolean.TRUE.toString(), "SonarQube key of the targeted project."},
-            {"o", "output", Boolean.TRUE.toString(), "Output path for exported resources."},
-            {"l", "language", Boolean.TRUE.toString(), "Language of the report. Values: en_US, fr_FR. Default: en_US."},
-            {"a", "author", Boolean.TRUE.toString(), "Name of the report writer."},
-            {"d", "date", Boolean.TRUE.toString(), "Date for the report. Default: current date."},
-            {"c", "disable-conf", Boolean.FALSE.toString(), "Disable export of quality configuration used during analysis."},
-            {"w", "disable-report", Boolean.FALSE.toString(), "Disable report generation."},
-            {"e", "disable-spreadsheet", Boolean.FALSE.toString(), "Disable spreadsheet generation."},
-            {"r", "template-report", Boolean.TRUE.toString(), "Path to the report template. Default: usage of internal template."},
-            {"x", "template-spreadsheet", Boolean.TRUE.toString(), "Path to the spreadsheet template. Default: usage of internal template."}
-    };
+    private static final String[][] OPTIONS_DEFINITION = [
+            ['h', 'help', Boolean.FALSE.toString(), 'Display this message.'],
+            ['v', 'version', Boolean.FALSE.toString(), 'Display current version.'],
+            ['s', 'server', Boolean.TRUE.toString(), 'Complete URL of the targeted SonarQube server.'],
+            ['t', 'token', Boolean.TRUE.toString(), 'SonarQube token of the SonarQube user who has permissions on the project.'],
+            ['p', 'project', Boolean.TRUE.toString(), 'SonarQube key of the targeted project.'],
+            ['o', 'output', Boolean.TRUE.toString(), 'Output path for exported resources.'],
+            ['l', 'language', Boolean.TRUE.toString(), 'Language of the report. Values: en_US, fr_FR. Default: en_US.'],
+            ['a', 'author', Boolean.TRUE.toString(), 'Name of the report writer.'],
+            ['d', 'date', Boolean.TRUE.toString(), 'Date for the report. Default: current date.'],
+            ['c', 'disable-conf', Boolean.FALSE.toString(), 'Disable export of quality configuration used during analysis.'],
+            ['w', 'disable-report', Boolean.FALSE.toString(), 'Disable report generation.'],
+            ['e', 'disable-spreadsheet', Boolean.FALSE.toString(), 'Disable spreadsheet generation.'],
+            ['r', 'template-report', Boolean.TRUE.toString(), 'Path to the report template. Default: usage of internal template.'],
+            ['x', 'template-spreadsheet', Boolean.TRUE.toString(), 'Path to the spreadsheet template. Default: usage of internal template.']
+    ];
 
     /**
      * Default construct which initialize and set options.
@@ -111,10 +111,10 @@ public class CommandLineManager {
         }
 
         // If help option is present we print it.
-        if (!areOptionsCorrect || commandLine.hasOption("h")) {
-            helpFormatter.printHelp(128, "java -jar cnesreport.jar",
-                    "Generate editable reports for SonarQube projects.\n\n", options,
-                    "\n\nPlease report issues at https://github.com/lequal/sonar-cnes-report/issues", true);
+        if (!areOptionsCorrect || commandLine.hasOption('h')) {
+            helpFormatter.printHelp(128, 'java -jar cnesreport.jar',
+                    'Generate editable reports for SonarQube projects.\n\n', options,
+                    '\n\nPlease report issues at https://github.com/lequal/sonar-cnes-report/issues', true);
             System.exit(0);
         }
     }
@@ -133,7 +133,7 @@ public class CommandLineManager {
         int analysisOptions = 0;
 
         for (final Option option : commandLine.getOptions()) {
-            if (option.getOpt().equals("h") || option.getOpt().equals("v")) {
+            if (option.getOpt().equals('h') || option.getOpt().equals('v')) {
                 standaloneOptions++;
             } else {
                 analysisOptions++;
@@ -177,7 +177,7 @@ public class CommandLineManager {
      * @return A string containing the value or an empty string.
      */
     public String getOptionValue(final String pOption) {
-        return this.getOptionValue(pOption, "");
+        return this.getOptionValue(pOption, '');
     }
 
     /**

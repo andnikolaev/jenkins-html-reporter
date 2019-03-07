@@ -34,8 +34,8 @@ public class Measure {
      * Default constructor
      */
     public Measure() {
-        this.metric = "";
-        this.value = "";
+        this.metric = '';
+        this.value = '';
     }
 
     /**
@@ -82,10 +82,10 @@ public class Measure {
 
     /**
      * Overridden method toString
-     * @return "metric":"value"
+     * @return 'metric':'value'
      */
     @Override
     public String toString() {
-        return getMetric()+":"+getValue();
+        return getMetric()+':'+getValue();
     }
 }

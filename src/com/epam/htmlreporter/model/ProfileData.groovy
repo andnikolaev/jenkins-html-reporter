@@ -34,7 +34,7 @@ public class ProfileData {
      */
     public ProfileData() {
         this.rules = new ArrayList<>();
-        this.conf = "";
+        this.conf = '';
     }
 
     /**

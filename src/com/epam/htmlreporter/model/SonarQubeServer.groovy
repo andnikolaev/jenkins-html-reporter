@@ -40,7 +40,7 @@ public class SonarQubeServer {
      * Default constructor
      */
     public SonarQubeServer() {
-        this.url = "http://localhost:9000";
+        this.url = 'http://localhost:9000';
         this.status = false;
         this.supported = false;
         this.versionMajor = 0;
@@ -78,7 +78,7 @@ public class SonarQubeServer {
      * @param status String returned by SonarQube API.
      */
     public void setStatus(final String status) {
-        this.status = "UP".equals(status);
+        this.status = 'UP'.equals(status);
     }
 
     /**
@@ -87,7 +87,7 @@ public class SonarQubeServer {
      * @param pSupported True if this version is supported.
      */
     public void setVersion(final String pVersion, final boolean pSupported) {
-        final String[] numbers = pVersion.split("\\.");
+        final String[] numbers = pVersion.split('\\.');
         // case when version is X.Y
         if(numbers.length >= 2) {
             this.versionMajor = Integer.parseInt(numbers[0]);
@@ -109,17 +109,17 @@ public class SonarQubeServer {
      * @return String containing version.
      */
     public String getVersion() {
-        return (new StringBuilder().append(versionMajor).append(".").append(versionMinor)
-                .append(".").append(versionRevision).append(".").append(versionBuild)).toString();
+        return (new StringBuilder().append(versionMajor).append('.').append(versionMinor)
+                .append('.').append(versionRevision).append('.').append(versionBuild)).toString();
     }
 
     /**
-     * SonarQube server normalized version: "X.Y.Z".
+     * SonarQube server normalized version: 'X.Y.Z'.
      * @return String containing version.
      */
     public String getNormalizedVersion() {
-        return (new StringBuilder().append(versionMajor).append(".").append(versionMinor)
-                .append(".").append(versionRevision)).toString();
+        return (new StringBuilder().append(versionMajor).append('.').append(versionMinor)
+                .append('.').append(versionRevision)).toString();
     }
 
     /**

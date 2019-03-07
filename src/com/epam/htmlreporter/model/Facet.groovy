@@ -38,7 +38,7 @@ public class Facet {
      */
     public Facet() {
         values = new ArrayList<>();
-        property = "";
+        property = '';
     }
 
     /**

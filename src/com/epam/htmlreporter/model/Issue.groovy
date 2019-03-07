@@ -84,18 +84,18 @@ public class Issue {
      * Default constructor
      */
     public Issue() {
-        this.key = "";
-        this.line = "";
-        this.message = "";
-        this.component = "";
-        this.rule = "";
-        this.severity = "";
-        this.project = "";
-        this.status = "";
-        this.resolution = "";
-        this.type = "";
-        this.effort = "0";
-        this.language = "";
+        this.key = '';
+        this.line = '';
+        this.message = '';
+        this.component = '';
+        this.rule = '';
+        this.severity = '';
+        this.project = '';
+        this.status = '';
+        this.resolution = '';
+        this.type = '';
+        this.effort = '0';
+        this.language = '';
         this.comments = new Comment[0];
     }
 
@@ -336,7 +336,7 @@ public class Issue {
         final StringBuilder coms = new StringBuilder();
 
         for (final Comment comment : this.comments) {
-            coms.append("[").append(comment.getLogin()).append("] ").append(comment.getMarkdown()).append("\n");
+            coms.append('[').append(comment.getLogin()).append('] ').append(comment.getMarkdown()).append('\n');
         }
 
         return coms.toString();

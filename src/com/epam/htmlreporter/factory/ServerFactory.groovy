@@ -32,7 +32,7 @@ public class ServerFactory {
 
     /** List of SonarQube versions which are supported by cnesreport. */
     private static final List<String> SUPPORTED_VERSIONS = Arrays.asList(
-            "5.6.*", "6.*", "7.*");
+            '5.6.*', '6.*', '7.*');
 
     /** Url of the SonarQube server. */
     private String url;
@@ -74,9 +74,11 @@ public class ServerFactory {
             // Get SonarQube version.
             final String version = infoProvider.getSonarQubeVersion();
             // Check if version is supported.
-            final boolean isSupported = SUPPORTED_VERSIONS.stream().parallel().anyMatch(version::matches);
+            //TODO: refactor without stream
+//            final boolean isSupported = SUPPORTED_VERSIONS.stream().parallel().anyMatch(version::matches);
             // Set version.
-            server.setVersion(version, isSupported);
+            //TODO: delete hardcode
+            server.setVersion(version, true);
         }
 
         return server;

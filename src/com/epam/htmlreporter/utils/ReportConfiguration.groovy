@@ -107,21 +107,21 @@ public class ReportConfiguration {
 
         // Final result to return.
         return new ReportConfiguration(
-                commandLineManager.hasOption("h"),
-                commandLineManager.hasOption("v"),
-                commandLineManager.getOptionValue("s", StringManager.getProperty(StringManager.SONAR_URL)),
-                commandLineManager.getOptionValue("t", StringManager.getProperty(StringManager.SONAR_TOKEN)),
-//                commandLineManager.getOptionValue("p", StringManager.EMPTY),
-                commandLineManager.getOptionValue("p", "01_Java_Basic-PavelGadzhiev"),
-                commandLineManager.getOptionValue("o", StringManager.getProperty(StringManager.DEFAULT_OUTPUT)),
-                commandLineManager.getOptionValue("l", StringManager.getProperty(StringManager.DEFAULT_LANGUAGE)),
-                commandLineManager.getOptionValue("a", StringManager.getProperty(StringManager.DEFAULT_AUTHOR)),
-                commandLineManager.getOptionValue("d", new SimpleDateFormat(StringManager.DATE_PATTERN).format(new Date())),
-                !commandLineManager.hasOption("c"),
-                !commandLineManager.hasOption("w"),
-                !commandLineManager.hasOption("e"),
-                commandLineManager.getOptionValue("r", StringManager.EMPTY),
-                commandLineManager.getOptionValue("x", StringManager.EMPTY));
+                commandLineManager.hasOption('h'),
+                commandLineManager.hasOption('v'),
+                commandLineManager.getOptionValue('s', StringManager.getProperty(StringManager.SONAR_URL)),
+                commandLineManager.getOptionValue('t', StringManager.getProperty(StringManager.SONAR_TOKEN)),
+//                commandLineManager.getOptionValue('p', StringManager.EMPTY),
+                commandLineManager.getOptionValue('p', '01_Java_Basic-PavelGadzhiev'),
+                commandLineManager.getOptionValue('o', StringManager.getProperty(StringManager.DEFAULT_OUTPUT)),
+                commandLineManager.getOptionValue('l', StringManager.getProperty(StringManager.DEFAULT_LANGUAGE)),
+                commandLineManager.getOptionValue('a', StringManager.getProperty(StringManager.DEFAULT_AUTHOR)),
+                commandLineManager.getOptionValue('d', new SimpleDateFormat(StringManager.DATE_PATTERN).format(new Date())),
+                !commandLineManager.hasOption('c'),
+                !commandLineManager.hasOption('w'),
+                !commandLineManager.hasOption('e'),
+                commandLineManager.getOptionValue('r', StringManager.EMPTY),
+                commandLineManager.getOptionValue('x', StringManager.EMPTY));
     }
 
     public boolean isHelp() {

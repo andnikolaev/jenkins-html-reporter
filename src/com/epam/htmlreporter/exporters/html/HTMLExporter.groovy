@@ -29,8 +29,8 @@ public class HTMLExporter implements IExporter {
         File htmlFileReport = null;
         InputStream fileInputStream = null;
         try {
-            fileInputStream = getClass().getResourceAsStream("/template/template.html")
-            String htmlString = IOUtils.toString(fileInputStream, Charset.forName("UTF-8"));
+            fileInputStream = getClass().getResourceAsStream('/template/template.html')
+            String htmlString = IOUtils.toString(fileInputStream, Charset.forName('UTF-8'));
             htmlString = setTitle(htmlString, report.getProjectName());
             htmlString = setAuthor(htmlString, report.getProjectName());
             htmlString = setIssues(htmlString, exportIssuesToHTML(report.getIssues()));
@@ -63,7 +63,7 @@ public class HTMLExporter implements IExporter {
     }
 
     private String exportIssuesToHTML(Map<String, List<Issue>> issueMap) {
-        Div div = new Div().setCSSClass("article");
+        Div div = new Div().setCSSClass('article');
         for (String issueClass : issueMap.keySet()) {
             div.appendChild(generateArticleHeaderWithClassName(issueClass));
             div.appendChild(generateArticleBody(issueMap.get(issueClass)));
@@ -72,19 +72,19 @@ public class HTMLExporter implements IExporter {
     }
 
     private Div generateArticleHeaderWithClassName(String className) {
-        Div div = new Div().setCSSClass("article_header");
+        Div div = new Div().setCSSClass('article_header');
         div.appendText(className);
         return div;
     }
 
     private Div generateArticleBody(List<Issue> issueList) {
-        Div div = new Div().setCSSClass("article_body");
+        Div div = new Div().setCSSClass('article_body');
         for (Issue issue : issueList) {
-            Div divItem = new Div().setCSSClass("article_body_item");
-            divItem.appendChild(generateItemDiv("article_item_line", "Line", issue.getLine()));
-            divItem.appendChild(generateItemDiv("article_item_priority", "Priority", issue.getSeverity()));
-            divItem.appendChild(generateItemDiv("article_item_type", "Type", issue.getType()));
-            divItem.appendChild(generateItemDiv("article_item_message", "Message", issue.getMessage()));
+            Div divItem = new Div().setCSSClass('article_body_item');
+            divItem.appendChild(generateItemDiv('article_item_line', 'Line', issue.getLine()));
+            divItem.appendChild(generateItemDiv('article_item_priority', 'Priority', issue.getSeverity()));
+            divItem.appendChild(generateItemDiv('article_item_type', 'Type', issue.getType()));
+            divItem.appendChild(generateItemDiv('article_item_message', 'Message', issue.getMessage()));
 
             div.appendChild(divItem);
         }
@@ -94,7 +94,7 @@ public class HTMLExporter implements IExporter {
 
     private Div generateItemDiv(String divClass, String divCapture, String divContent) {
         Div itemDiv = new Div().setCSSClass(divClass);
-        Div titleDiv = new Div().setCSSClass("article_item_title");
+        Div titleDiv = new Div().setCSSClass('article_item_title');
         titleDiv.appendText(divCapture);
         Div lineNumber = new Div();
         lineNumber.appendText(divContent);

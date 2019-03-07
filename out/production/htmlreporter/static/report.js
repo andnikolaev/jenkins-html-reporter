@@ -26,9 +26,9 @@ window.registerExtension('cnesreport/report', function (options) {
     var checkForm = function () {
         // check the field key
         // get it
-        var key = document.forms["generation-form"]["key"].value;
+        var key = document.forms['generation-form']['key'].value;
         // check if void
-        if (key === "") {
+        if (key === '') {
             // log error
             //TODO
             // abort the process
@@ -44,7 +44,7 @@ window.registerExtension('cnesreport/report', function (options) {
      */
     var setEnabled = function (isEnabled) {
         // retrieve the form
-        var form = document.getElementById("generation-form");
+        var form = document.getElementById('generation-form');
         // get all the components of the form
         var elements = form.elements;
         // change all components readOnly field to (un)lock them
@@ -112,8 +112,8 @@ window.registerExtension('cnesreport/report', function (options) {
     if (isDisplayedReporting) {
 
         // Add html template
-        var template = document.createElement("div");
-        template.setAttribute("id", "template");
+        var template = document.createElement('div');
+        template.setAttribute('id', 'template');
         options.el.appendChild(template);
         // retrieve template from html
         $('#template').load('../../static/cnesreport/templates/reportForm.html', function(){
@@ -128,8 +128,8 @@ window.registerExtension('cnesreport/report', function (options) {
                 if(checkForm()) {
 
                     // Get form values
-                    var key = document.forms["generation-form"]["key"].value;
-                    var author = document.forms["generation-form"]["author"].value;
+                    var key = document.forms['generation-form']['key'].value;
+                    var author = document.forms['generation-form']['author'].value;
 
                     // lock the form
                     setEnabled(false);

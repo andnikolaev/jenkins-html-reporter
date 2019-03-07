@@ -66,14 +66,14 @@ public class Rule {
      * Default constructor
      */
     public Rule() {
-        this.key = "";
-        this.repo = "";
-        this.name = "";
-        this.severity = "";
-        this.htmlDesc = "";
-        this.lang = "";
-        this.status = "";
-        this.langName = "";
+        this.key = '';
+        this.repo = '';
+        this.name = '';
+        this.severity = '';
+        this.htmlDesc = '';
+        this.lang = '';
+        this.status = '';
+        this.langName = '';
     }
 
     /**

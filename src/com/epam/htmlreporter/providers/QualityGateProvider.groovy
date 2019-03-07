@@ -37,11 +37,11 @@ import java.util.List;
 public class QualityGateProvider extends AbstractDataProvider {
 
     /** Field to find in json. */
-    private static final String QUALITY_GATE = "qualityGate";
+    private static final String QUALITY_GATE = 'qualityGate';
     /** Field to find in json corresponding to the quality gate's id. */
-    private static final String KEY = "key";
+    private static final String KEY = 'key';
     /** Field to find in json response. */
-    private static final String RESULTS = "results";
+    private static final String RESULTS = 'results';
 
     /**
      * Complete constructor.
@@ -76,7 +76,7 @@ public class QualityGateProvider extends AbstractDataProvider {
         for (QualityGate i : tmp) {
             // request the criteria
             request = String.format(getRequest(GET_QUALITY_GATES_DETAILS_REQUEST),
-                    getServer().getUrl(), i.getName().replaceAll(" ", "%20"));
+                    getServer().getUrl(), i.getName().replaceAll(' ', '%20'));
             // perform previous request
             jo = request(request);
 
@@ -119,7 +119,7 @@ public class QualityGateProvider extends AbstractDataProvider {
         // search for the good quality gate
         final Iterator<QualityGate> iterator = qualityGates.iterator();
 
-        if(server.getNormalizedVersion().matches("5.*|6.[012].*")) { // Special code for SonarQube v5.*
+        if(server.getNormalizedVersion().matches('5.*|6.[012].*')) { // Special code for SonarQube v5.*
             res = getProjectQualityGateOld(jsonObject, iterator);
         } else { // code for new SonarQube versions
             res = getProjectQualityGateNew(jsonObject, iterator);

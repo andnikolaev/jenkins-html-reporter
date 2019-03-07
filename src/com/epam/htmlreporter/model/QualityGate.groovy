@@ -35,7 +35,7 @@ public class QualityGate {
     /**
      * True if it is the default Quality gate in SonarQube
      */
-    @SerializedName("default")
+    @SerializedName('default')
     private boolean defaultQG;
     /**
      * Raw string containing xml configuration
@@ -46,10 +46,10 @@ public class QualityGate {
      * Default constructor
      */
     public QualityGate() {
-        this.id = "";
-        this.name = "";
+        this.id = '';
+        this.name = '';
         this.defaultQG = false;
-        this.conf = "";
+        this.conf = '';
     }
 
     /**

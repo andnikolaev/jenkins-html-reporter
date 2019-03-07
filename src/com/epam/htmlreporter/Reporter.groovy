@@ -53,30 +53,30 @@ public final class Reporter {
                 final String name = Reporter.class.getPackage().getImplementationTitle();
                 final String version = Reporter.class.getPackage().getImplementationVersion();
                 final String vendor = Reporter.class.getPackage().getImplementationVendor();
-                message = String.format("%s %s by %s", name, version, vendor);
+                message = String.format('%s %s by %s', name, version, vendor);
                 LOGGER.info(message);
                 System.exit(0);
             }
 
             // Print information about SonarQube.
-            message = String.format("SonarQube URL: %s", conf.getServer());
+            message = String.format('SonarQube URL: %s', conf.getServer());
             LOGGER.info(message);
 
             // Initialize connexion with SonarQube and retrieve primitive information
             final SonarQubeServer server = new ServerFactory(conf.getServer(), conf.getToken()).create();
 
-            message = String.format("SonarQube online: %s", server.isUp());
+            message = String.format('SonarQube online: %s', server.isUp());
             LOGGER.info(message);
 
             if (!server.isUp()) {
-                throw new SonarQubeException("Impossible to reach SonarQube instance.");
+                throw new SonarQubeException('Impossible to reach SonarQube instance.');
             }
 
-            message = String.format("Detected SonarQube version: %s", server.getNormalizedVersion());
+            message = String.format('Detected SonarQube version: %s', server.getNormalizedVersion());
             LOGGER.info(message);
 
             if (!server.isSupported()) {
-                throw new SonarQubeException("SonarQube instance is not supported by cnesreport.");
+                throw new SonarQubeException('SonarQube instance is not supported by cnesreport.');
             }
 
             // Generate the model of the report.
@@ -84,7 +84,7 @@ public final class Reporter {
             // Generate results files.
             ReportFactory.report(conf, model);
 
-            message = "Report generation: SUCCESS";
+            message = 'Report generation: SUCCESS';
             LOGGER.info(message);
 
         } catch (BadExportationDataTypeException | BadSonarQubeRequestException | IOException | UnknownQualityGateException | SonarQubeException e) {

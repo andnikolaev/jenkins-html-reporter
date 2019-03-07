@@ -95,7 +95,7 @@ public class ReportModelFactory {
         report.setProjectDate(this.date);
 
         if(!projectProvider.hasProject(this.project)) {
-            throw new SonarQubeException(String.format("Unknown project '%s' on SonarQube instance.", this.project));
+//            throw new SonarQubeException(String.format('Unknown project '%s' on SonarQube instance.', this.project));
         }
 
         // measures's setting

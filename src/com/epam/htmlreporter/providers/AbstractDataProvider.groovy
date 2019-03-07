@@ -39,117 +39,117 @@ public abstract class AbstractDataProvider {
     /**
      * Name for properties' file about requests
      */
-    protected static final String REQUESTS_PROPERTIES = "requests.properties";
+    protected static final String REQUESTS_PROPERTIES = 'requests.properties';
     /**
      *  Field to retrieve languages list.
      */
-    protected static final String GET_LANGUAGES = "GET_LANGUAGES";
+    protected static final String GET_LANGUAGES = 'GET_LANGUAGES';
     /**
      *  Name of the request for getting quality profiles' linked projects
      */
     protected static final String GET_QUALITY_PROFILES_PROJECTS_REQUEST =
-            "GET_QUALITY_PROFILES_PROJECTS_REQUEST";
+            'GET_QUALITY_PROFILES_PROJECTS_REQUEST';
     /**
      *  Name of the request for getting project's quality profiles
      */
     public static final String GET_PROJECT_QUALITY_PROFILES_REQUEST =
-            "GET_PROJECT_QUALITY_PROFILES_REQUEST";
+            'GET_PROJECT_QUALITY_PROFILES_REQUEST';
     /**
      *  Name of the request allowing to retrieve the quality gate
      */
-    protected static final String GET_QUALITY_GATE_REQUEST = "GET_QUALITY_GATE_REQUEST";
+    protected static final String GET_QUALITY_GATE_REQUEST = 'GET_QUALITY_GATE_REQUEST';
     /**
      *  Name of the request allowing to retrieve the projects linked to quality gate
      */
-    public static final String QUALITY_GATE_PROJECTS_REQUEST = "QUALITY_GATE_PROJECTS_REQUEST";
+    public static final String QUALITY_GATE_PROJECTS_REQUEST = 'QUALITY_GATE_PROJECTS_REQUEST';
     /**
      *  Name of the request for getting quality gates' details
      */
     protected static final String GET_QUALITY_GATES_DETAILS_REQUEST =
-            "GET_QUALITY_GATES_DETAILS_REQUEST";
+            'GET_QUALITY_GATES_DETAILS_REQUEST';
     /**
      *  Name of the request for getting quality profiles' linked rules
      */
     protected static final String GET_QUALITY_PROFILES_RULES_REQUEST =
-            "GET_QUALITY_PROFILES_RULES_REQUEST";
+            'GET_QUALITY_PROFILES_RULES_REQUEST';
     /**
      *  Name of the request for getting issues
      */
-    protected static final String GET_ISSUES_REQUEST = "GET_ISSUES_REQUEST";
+    protected static final String GET_ISSUES_REQUEST = 'GET_ISSUES_REQUEST';
     /**
      *  Name of the request for getting facets
      */
-    protected static final String GET_FACETS_REQUEST = "GET_FACETS_REQUEST";
+    protected static final String GET_FACETS_REQUEST = 'GET_FACETS_REQUEST';
     /**
      *  Name of the property for the maximum number of results per page
      */
-    protected static final String MAX_PER_PAGE_SONARQUBE = "MAX_PER_PAGE_SONARQUBE";
+    protected static final String MAX_PER_PAGE_SONARQUBE = 'MAX_PER_PAGE_SONARQUBE';
     /**
      *  Name of the request for getting quality gates
      */
-    protected static final String GET_QUALITY_GATES_REQUEST = "GET_QUALITY_GATES_REQUEST";
+    protected static final String GET_QUALITY_GATES_REQUEST = 'GET_QUALITY_GATES_REQUEST';
     /**
      *  Name of the request for getting measures
      */
-    protected static final String GET_MEASURES_REQUEST = "GET_MEASURES_REQUEST";
+    protected static final String GET_MEASURES_REQUEST = 'GET_MEASURES_REQUEST';
     /**
      *  Name of the request for getting a specific project
      */
-    protected static final String GET_PROJECT_REQUEST = "GET_PROJECT_REQUEST";
+    protected static final String GET_PROJECT_REQUEST = 'GET_PROJECT_REQUEST';
     /**
      *  Name of the request for getting quality profiles
      */
-    protected static final String GET_QUALITY_PROFILES_REQUEST = "GET_QUALITY_PROFILES_REQUEST";
+    protected static final String GET_QUALITY_PROFILES_REQUEST = 'GET_QUALITY_PROFILES_REQUEST';
     /**
      *  Name of the request for getting quality profiles' configuration
      */
     protected static final String GET_QUALITY_PROFILES_CONF_REQUEST =
-            "GET_QUALITY_PROFILES_CONFIGURATION_REQUEST";
+            'GET_QUALITY_PROFILES_CONFIGURATION_REQUEST';
     /**
      *  Name of the request for getting SonarQube server information
      */
     protected static final String GET_SONARQUBE_INFO_REQUEST =
-            "GET_SONARQUBE_INFO_REQUEST";
+            'GET_SONARQUBE_INFO_REQUEST';
     /**
      * Field to search in json to get results' values
      */
-    protected static final String RESULTS = "results";
+    protected static final String RESULTS = 'results';
     /**
      * Field to search in json to get profiles
      */
-    protected static final String PROFILES = "profiles";
+    protected static final String PROFILES = 'profiles';
     /**
      * Field to search in json to get issues
      */
-    protected static final String ISSUES = "issues";
+    protected static final String ISSUES = 'issues';
     /**
      * Field to search in json to get the total page's number
      */
-    protected static final String TOTAL = "total";
+    protected static final String TOTAL = 'total';
     /**
      * Field to search in json to get facets
      */
-    protected static final String FACETS = "facets";
+    protected static final String FACETS = 'facets';
     /**
      * Field to search in json to get the component
      */
-    protected static final String COMPONENT = "component";
+    protected static final String COMPONENT = 'component';
     /**
      * Field to search in json to get measures
      */
-    protected static final String MEASURES = "measures";
+    protected static final String MEASURES = 'measures';
     /**
      * Field to search in json to get the boolean saying if a profile is the default one
      */
-    protected static final String DEFAULT = "default";
+    protected static final String DEFAULT = 'default';
     /**
      * Field to search in json to get quality gates
      */
-    protected static final String QUALITYGATES = "qualitygates";
+    protected static final String QUALITYGATES = 'qualitygates';
     /**
      * Field to search in json to get rules
      */
-    protected static final String RULES = "rules";
+    protected static final String RULES = 'rules';
 
     /**
      * Logger for the class
@@ -192,7 +192,9 @@ public abstract class AbstractDataProvider {
         final ClassLoader classLoader = AbstractDataProvider.class.getClassLoader();
 
         // load properties file as a stream
-        try (InputStream input = classLoader.getResourceAsStream(REQUESTS_PROPERTIES)){
+        InputStream input = null;
+        try {
+            input = classLoader.getResourceAsStream(REQUESTS_PROPERTIES)
             if(input!=null) {
                 // load properties from the stream in an adapted structure
                 requests.load(input);
@@ -237,13 +239,13 @@ public abstract class AbstractDataProvider {
      */
     private void isErrorFree(final JsonObject jsonObject) throws BadSonarQubeRequestException {
         // we retrieve the exception
-        final JsonElement error = jsonObject.get("errors");
+        final JsonElement error = jsonObject.get('errors');
         // if there is an error we search the message and throw an exception
         if (error != null) {
             // Json object of the error
             final JsonObject errorJO = error.getAsJsonArray().get(0).getAsJsonObject();
             // get the error message
-            final JsonElement errorElement = errorJO.get("msg");
+            final JsonElement errorElement = errorJO.get('msg');
             final String errorMessage = (getGson().fromJson(errorElement, String.class));
             // throw exception if there was a problem when dealing with the server
             throw new BadSonarQubeRequestException(errorMessage);
@@ -263,7 +265,7 @@ public abstract class AbstractDataProvider {
         final String raw = stringRequest(request);
 
         // prepare json
-        final JsonElement json;
+        JsonElement json = null;
 
         // verify that the server response was correct
         try {
@@ -271,7 +273,7 @@ public abstract class AbstractDataProvider {
         } catch (Exception e) {
             // log exception's message
             LOGGER.log(Level.SEVERE, e.getMessage(), e);
-            throw new BadSonarQubeRequestException("Server answered: " + raw +
+            throw new BadSonarQubeRequestException('Server answered: ' + raw +
                     StringManager.SPACE + e.getMessage());
         }
 
@@ -293,9 +295,9 @@ public abstract class AbstractDataProvider {
     protected String stringRequest(final String request) throws SonarQubeException {
         // prepare the request by replacing some relevant special characters
         // replace spaces
-        String preparedRequest = request.replaceAll(" ", "%20");
+        String preparedRequest = request.replaceAll(' ', '%20');
         // replace + characters
-        preparedRequest = preparedRequest.replaceAll("\\+", "%2B");
+        preparedRequest = preparedRequest.replaceAll('\\+', '%2B');
 
         // launch the request on SonarQube server and retrieve resources into a string
         return RequestManager.getInstance().get(preparedRequest, this.token);

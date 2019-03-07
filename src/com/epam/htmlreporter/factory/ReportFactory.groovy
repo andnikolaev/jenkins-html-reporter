@@ -33,31 +33,31 @@ public class ReportFactory {
    /**
     * Property for the word report filename.
     */
-   private static final String REPORT_FILENAME = "report.output";
+   private static final String REPORT_FILENAME = 'report.output';
    /**
     * Property for the excel report filename.
     */
-   private static final String ISSUES_FILENAME = "issues.output";
+   private static final String ISSUES_FILENAME = 'issues.output';
    /**
     * Pattern for the name of the directory containing configuration files.
     */
-   private static final String CONF_FOLDER_PATTERN = "%s/conf";
+   private static final String CONF_FOLDER_PATTERN = '%s/conf';
    /**
     * Error message returned when the program cannot create a folder because it already exists.
     */
-   private static final String CNES_MKDIR_ERROR = "Impossible to create the following directory: %s";
+   private static final String CNES_MKDIR_ERROR = 'Impossible to create the following directory: %s';
    /**
     * Placeholder for the base directory of reporting.
     */
-   private static final String BASEDIR = "BASEDIR";
+   private static final String BASEDIR = 'BASEDIR';
    /**
     * Placeholder for the date of reporting.
     */
-   private static final String DATE = "DATE";
+   private static final String DATE = 'DATE';
    /**
     * Placeholder for the name of the project.
     */
-   private static final String NAME = "NAME";
+   private static final String NAME = 'NAME';
    /**
     * Logger of this class.
     */

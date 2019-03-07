@@ -64,10 +64,10 @@ public final class RequestManager {
      * @throws SonarQubeException When SonarQube server is not callable.
      */
     public String get(final String url, final String token) throws SonarQubeException {
-        String baseUrl = StringUtils.substringBeforeLast(url, "/");
-        String path = StringUtils.substringAfterLast(url, "/");
+        String baseUrl = StringUtils.substringBeforeLast(url, '/');
+        String path = StringUtils.substringAfterLast(url, '/');
         final HttpConnector.Builder builder = HttpConnector.newBuilder()
-                .userAgent("cnesreport")
+                .userAgent('cnesreport')
                 .url(baseUrl);
         if (!StringManager.getProperty(StringManager.SONAR_TOKEN).equals(token)) {
             builder.credentials(token, null);
@@ -77,7 +77,7 @@ public final class RequestManager {
         try {
             response = httpConnector.call(new GetRequest(path));
         } catch (Exception e) {
-            throw new SonarQubeException("Impossible to reach SonarQube instance.");
+            throw new SonarQubeException('Impossible to reach SonarQube instance.');
         }
         return response.content();
     }
