@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="groovy-2.5.6" level="application" />
+    <orderEntry type="library" name="groovy-2.5.6" level="application" />
+    <orderEntry type="module-library">
+      <library name="Grab:commons-io-2.4.jar">
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.groovy/grapes/commons-io/commons-io/jars/commons-io-2.4.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Grab:gson-2.8.0.jar">
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.groovy/grapes/com.google.code.gson/gson/jars/gson-2.8.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Grab:commons-lang-2.6.jar">
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.groovy/grapes/commons-lang/commons-lang/jars/commons-lang-2.6.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Grab:sonar-ws-6.7.jar">
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.groovy/grapes/org.sonarsource.sonarqube/sonar-ws/jars/sonar-ws-6.7.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Grab:protobuf-java-3.0.0-beta-2.jar">
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.groovy/grapes/com.google.protobuf/protobuf-java/bundles/protobuf-java-3.0.0-beta-2.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Grab:guava-18.0.jar">
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.groovy/grapes/com.google.guava/guava/bundles/guava-18.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Grab:okhttp-3.7.0.jar">
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.groovy/grapes/com.squareup.okhttp3/okhttp/jars/okhttp-3.7.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Grab:okio-1.12.0.jar">
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.groovy/grapes/com.squareup.okio/okio/jars/okio-1.12.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Grab:gagawa-1.0.1.jar">
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.groovy/grapes/com.hp.gagawa/gagawa/jars/gagawa-1.0.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+  </component>
+</module>

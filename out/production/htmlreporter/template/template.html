@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$title</title>
+    <style>
+		html, body{
+    margin: 0;
+    padding: 0;
+
+}
+
+header h1{
+    color: red;
+    text-align: center;
+}
+
+main{
+    font-size: 1.2em;
+    width: 100%;
+    display: flex;
+}
+.article{
+    margin:1em 1em;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 4px double black;
+    padding: 5px;
+}
+
+.article_header{
+    margin-top: 30px;
+    font-weight: bold;
+}
+.article_body{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+.article_body_item{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    border: 1px solid black;
+}
+
+
+.article_body_item div {
+    text-align: center;
+    padding: 2px;
+}
+.article_item_line{
+    border-right: 1px solid black;
+    width: 10%;
+    min-width: 100px;
+}
+.article_item_priority{
+    border-right: 1px solid black;
+    width: 10%;
+    min-width: 100px;
+}
+
+.article_item_type{
+    border-right: 1px solid black;
+    width: 20%;
+    min-width: 200px;
+}
+.article_item_message{
+    flex-grow: 2;
+    width: 60%;
+}
+
+.article_item_title{
+    border-bottom: 1px solid black;
+    font-weight: 800;
+}
+
+@media screen and (max-width: 400px) {
+    .article_body_item{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+
+
+    </style>
+</head>
+<body>
+<div id="wrapper">
+    <header>
+        <h1>$author</h1>
+    </header>
+    <main>
+        <!--<div class="article">-->
+        <!--<div class="article_header">Div c текстом</div>-->
+        <!--<div class="article_body">-->
+        <!--<div class="article_body_item">-->
+        <!--<div class="article_item_line">-->
+        <!--<div>Line</div>-->
+        <!--<div>Текст</div>-->
+        <!--</div>-->
+        <!--<div class="article_item_priority">-->
+        <!--<div>Priority</div>-->
+        <!--<div>Текст</div>-->
+        <!--</div>-->
+        <!--<div class="article_item_type">-->
+        <!--<div>Type</div>-->
+        <!--<div>Текст</div>-->
+        <!--</div>-->
+        <!--<div class="article_item_message">-->
+        <!--<div>Message</div>-->
+        <!--<div>Текст</div>-->
+
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        $issues
+    </main>
+</div>
+
+</body>
+</html>
