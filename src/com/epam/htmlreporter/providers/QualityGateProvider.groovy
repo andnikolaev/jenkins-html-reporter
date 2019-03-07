@@ -65,9 +65,9 @@ public class QualityGateProvider extends AbstractDataProvider {
         final List<QualityGate> res = new ArrayList<>();
 
         // Get all quality gates
-        String request = String.format(getRequest(GET_QUALITY_GATES_REQUEST), getServer().getUrl());
+        String request1 = String.format(getRequest(GET_QUALITY_GATES_REQUEST), getServer().getUrl());
         // perform the request to the server
-        JsonObject jo = request(request);
+        JsonObject jo = request(request1);
 
         // Get quality gates criteria
         final String defaultQG = (getGson().fromJson(jo.get(DEFAULT), String.class));
@@ -75,10 +75,10 @@ public class QualityGateProvider extends AbstractDataProvider {
         // for each quality gate
         for (QualityGate i : tmp) {
             // request the criteria
-            request = String.format(getRequest(GET_QUALITY_GATES_DETAILS_REQUEST),
+            request1 = String.format(getRequest(GET_QUALITY_GATES_DETAILS_REQUEST),
                     getServer().getUrl(), i.getName().replaceAll(' ', '%20'));
             // perform previous request
-            jo = request(request);
+            jo = request(request1);
 
             // put it in configuration field
             i.setConf(jo.toString());
@@ -108,13 +108,13 @@ public class QualityGateProvider extends AbstractDataProvider {
         // get all the quality gates
         final List<QualityGate> qualityGates = getQualityGates();
         // request the criteria
-        String request = String.format(getRequest(GET_QUALITY_GATE_REQUEST),
+        String request1 = String.format(getRequest(GET_QUALITY_GATE_REQUEST),
                 getServer().getUrl(), getProjectKey());
         // Final quality gate result.
         QualityGate res;
 
         // perform previous request
-        final JsonObject jsonObject = request(request);
+        final JsonObject jsonObject = request(request1);
 
         // search for the good quality gate
         final Iterator<QualityGate> iterator = qualityGates.iterator();
@@ -187,9 +187,9 @@ public class QualityGateProvider extends AbstractDataProvider {
             if (tmp.isDefault()) {
                 res = tmp;
             }
-            String request = String.format(getRequest(QUALITY_GATE_PROJECTS_REQUEST),
+            String request1 = String.format(getRequest(QUALITY_GATE_PROJECTS_REQUEST),
                     getServer().getUrl(), tmp.getId(), project.getName());
-            response = request(request);
+            response = request(request1);
             projects = (getGson().fromJson(response.getAsJsonArray(RESULTS), Project[].class));
             iteratorOnProjects = Arrays.asList(projects).iterator();
             while (iteratorOnProjects.hasNext() && !find) {

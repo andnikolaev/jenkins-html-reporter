@@ -110,10 +110,10 @@ public class IssuesProvider extends AbstractDataProvider {
             // get maximum number of results per page
             final int maxPerPage = Integer.parseInt(getRequest(MAX_PER_PAGE_SONARQUBE));
             // prepare the server to get all the issues
-            final String request = String.format(getRequest(GET_ISSUES_REQUEST),
+            final String request1 = String.format(getRequest(GET_ISSUES_REQUEST),
                     getServer().getUrl(), getProjectKey(), maxPerPage, page, confirmed);
             // perform the request to the server
-            final JsonObject jo = request(request);
+            final JsonObject jo = request(request1);
             // transform json to Issue and Rule objects
             issuesTemp = (getGson().fromJson(jo.get(ISSUES), Issue[].class));
             rulesTemp = (getGson().fromJson(jo.get(RULES), Rule[].class));
@@ -212,10 +212,10 @@ public class IssuesProvider extends AbstractDataProvider {
             // get maximum number of results per page
             final int maxPerPage = Integer.parseInt(getRequest(MAX_PER_PAGE_SONARQUBE));
             // prepare the server to get all the issues
-            final String request = String.format(getRequest(GET_ISSUES_REQUEST),
+            final String request1 = String.format(getRequest(GET_ISSUES_REQUEST),
                     getServer().getUrl(), getProjectKey(), maxPerPage, page, CONFIRMED);
             // perform the request to the server
-            final JsonObject jo = request(request);
+            final JsonObject jo = request(request1);
             // transform json to Issue objects
             final Map [] tmp = (getGson().fromJson(jo.get(ISSUES), Map[].class));
             // add them to the final result
@@ -251,10 +251,10 @@ public class IssuesProvider extends AbstractDataProvider {
     public List<Facet> getFacets() throws BadSonarQubeRequestException, SonarQubeException {
 
         // prepare the request
-        final String request = String.format(getRequest(GET_FACETS_REQUEST),
+        final String request1 = String.format(getRequest(GET_FACETS_REQUEST),
                 getServer().getUrl(), getProjectKey());
         // contact the server to request the resources as json
-        final JsonObject jo = request(request);
+        final JsonObject jo = request(request1);
         // put wanted resources in facets array and list
         final Facet [] tmp = (getGson().fromJson(jo.get(FACETS), Facet[].class));
 

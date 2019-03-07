@@ -35,51 +35,51 @@ public final class StringManager {
     /**
      * Just an empty string.
      */
-    public static final String EMPTY = '';
+    public static final String EMPTY = "";
     /**
      * Just a tabulation.
      */
-    public static final String TAB = '\t';
+    public static final String TAB = "\t";
     /**
      * Just a space.
      */
-    public static final String SPACE = ' ';
+    public static final String SPACE = " ";
     /**
      * Just a space for URI.
      */
-    public static final String URI_SPACE = '%20';
+    public static final String URI_SPACE = "%20";
     /**
-     * Name for properties' file about report.
+     * Name for properties" file about report.
      */
-    public static final String REPORT_PROPERTIES = 'report.properties';
+    public static final String REPORT_PROPERTIES = "report.properties";
     /**
      * Name of the property giving the server server.
      */
-    public static final String SONAR_URL = 'sonar.url';
+    public static final String SONAR_URL = "sonar.url";
     /**
      * Name of the property giving the token to authenticate to SonarQube.
      */
-    public static final String SONAR_TOKEN = 'sonar.token';
+    public static final String SONAR_TOKEN = "sonar.token";
     /**
      * Logged message when there are too much issues to export.
      */
-    public static final String ISSUES_OVERFLOW_MSG = 'log.overflow.msg';
+    public static final String ISSUES_OVERFLOW_MSG = "log.overflow.msg";
     /**
      * Pattern to format the date.
      */
-    public static final String DATE_PATTERN = 'yyyy-MM-dd';
+    public static final String DATE_PATTERN = "yyyy-MM-dd";
     /**
      * Default path to the target diretory for report files.
      */
-    public static final String DEFAULT_OUTPUT = 'report.path';
+    public static final String DEFAULT_OUTPUT = "report.path";
     /**
      * Default language for the report.
      */
-    public static final String DEFAULT_LANGUAGE = 'report.locale';
+    public static final String DEFAULT_LANGUAGE = "report.locale";
     /**
      * Default name for the author.
      */
-    public static final String DEFAULT_AUTHOR = 'report.author';
+    public static final String DEFAULT_AUTHOR = "report.author";
 
     /**
      * Logger for StringManager.
@@ -138,7 +138,7 @@ public final class StringManager {
         }
 
         // load internationalized strings, french by default
-//        changeLocale('fr','FR');
+//        changeLocale("fr","FR");
     }
 
     /**
@@ -166,7 +166,6 @@ public final class StringManager {
      * @param property Key of the property you want.
      * @return The value of the property you want as a String.
      */
-    @Override
     public static String getProperty(final String property) {
         return properties.getProperty(property);
     }
@@ -181,7 +180,7 @@ public final class StringManager {
         // change locale
         currentLocale = new Locale(language, country);
         // reload messages
-        messages = ResourceBundle.getBundle('messages', currentLocale);
+        messages = ResourceBundle.getBundle("messages", currentLocale);
     }
 
     /**

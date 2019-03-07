@@ -63,8 +63,8 @@ public class SonarQubeInfoProvider extends AbstractDataProvider {
         try {
             // send a request to SonarQube server and return th response as a json object
             // if there is an error on server side this method throws an exception
-            final String request = String.format(getRequest(GET_SONARQUBE_INFO_REQUEST), getServer().getUrl());
-            final JsonObject jsonObject = request(request);
+            final String request1 = String.format(getRequest(GET_SONARQUBE_INFO_REQUEST), getServer().getUrl());
+            final JsonObject jsonObject = request(request1);
             // extract data from json object and return it
             status = jsonObject.get('status').getAsString();
         } catch (final Exception e) {

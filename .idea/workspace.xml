@@ -2,94 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8cc5072e-9d89-4066-b090-b952193aeb06" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/epam/htmlreporter/factory/ProviderFactory.groovy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/epam/htmlreporter/factory/ReportFactory.groovy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/epam/htmlreporter/factory/ReportModelFactory.groovy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/epam/htmlreporter/factory/ServerFactory.groovy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/epam/htmlreporter/providers/AbstractDataProvider.groovy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/epam/htmlreporter/providers/IssuesProvider.groovy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/epam/htmlreporter/providers/LanguageProvider.groovy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/epam/htmlreporter/providers/MeasureProvider.groovy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/epam/htmlreporter/providers/ProjectProvider.groovy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/epam/htmlreporter/providers/QualityGateProvider.groovy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/epam/htmlreporter/providers/QualityProfileProvider.groovy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/epam/htmlreporter/providers/SonarQubeInfoProvider.groovy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/epam/htmlreporter/utils/CommandLineManager.groovy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/epam/htmlreporter/utils/DisplayFormatter.groovy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/epam/htmlreporter/utils/ReportConfiguration.groovy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/epam/htmlreporter/utils/StringManager.groovy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/epam/htmlreporter/exporters/IExporter.groovy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/epam/htmlreporter/utils/StringManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/htmlreporter/com/epam/htmlreporter/Reporter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/htmlreporter/com/epam/htmlreporter/exceptions/UnknownQualityGateException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/htmlreporter/com/epam/htmlreporter/exceptions/package-info.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/htmlreporter/com/epam/htmlreporter/exporters/html/HTMLExporter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/htmlreporter/com/epam/htmlreporter/factory/ProviderFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/htmlreporter/com/epam/htmlreporter/factory/ProviderFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/htmlreporter/com/epam/htmlreporter/factory/ReportFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/htmlreporter/com/epam/htmlreporter/factory/ReportModelFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/htmlreporter/com/epam/htmlreporter/factory/ServerFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/htmlreporter/com/epam/htmlreporter/model/Comment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/htmlreporter/com/epam/htmlreporter/model/Facet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/htmlreporter/com/epam/htmlreporter/model/Issue.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/htmlreporter/com/epam/htmlreporter/model/Language.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/htmlreporter/com/epam/htmlreporter/model/Measure.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/htmlreporter/com/epam/htmlreporter/model/ProfileData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/htmlreporter/com/epam/htmlreporter/model/ProfileMetaData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/htmlreporter/com/epam/htmlreporter/model/QualityGate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/htmlreporter/com/epam/htmlreporter/model/Report.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/htmlreporter/com/epam/htmlreporter/model/Rule.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/htmlreporter/com/epam/htmlreporter/model/SonarQubeServer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/htmlreporter/com/epam/htmlreporter/providers/AbstractDataProvider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/htmlreporter/com/epam/htmlreporter/providers/IssuesProvider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/htmlreporter/com/epam/htmlreporter/providers/LanguageProvider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/htmlreporter/com/epam/htmlreporter/providers/MeasureProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/htmlreporter/com/epam/htmlreporter/providers/MeasureProvider.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/htmlreporter/com/epam/htmlreporter/providers/ProjectProvider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/htmlreporter/com/epam/htmlreporter/providers/QualityGateProvider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/htmlreporter/com/epam/htmlreporter/providers/QualityProfileProvider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/htmlreporter/com/epam/htmlreporter/providers/RequestManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/htmlreporter/com/epam/htmlreporter/providers/SonarQubeInfoProvider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/htmlreporter/com/epam/htmlreporter/utils/CommandLineManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/htmlreporter/com/epam/htmlreporter/utils/DisplayFormatter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/htmlreporter/com/epam/htmlreporter/utils/ReportConfiguration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/htmlreporter/com/epam/htmlreporter/utils/StringManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/htmlreporter/static/report.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/htmlreporter/static/report.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/htmlreporter/static/templates/denied.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/htmlreporter/static/templates/denied.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/htmlreporter/static/templates/reportForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/htmlreporter/static/templates/reportForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/htmlreporter/template/template.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/htmlreporter/template/template.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/epam/htmlreporter/Reporter.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/epam/htmlreporter/Reporter.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/epam/htmlreporter/exceptions/UnknownQualityGateException.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/epam/htmlreporter/exceptions/UnknownQualityGateException.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/epam/htmlreporter/exporters/html/HTMLExporter.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/epam/htmlreporter/exporters/html/HTMLExporter.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/epam/htmlreporter/factory/ProviderFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/epam/htmlreporter/factory/ReportFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/epam/htmlreporter/factory/ReportModelFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/epam/htmlreporter/factory/ServerFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/epam/htmlreporter/model/Comment.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/epam/htmlreporter/model/Comment.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/epam/htmlreporter/model/Facet.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/epam/htmlreporter/model/Facet.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/epam/htmlreporter/model/Issue.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/epam/htmlreporter/model/Issue.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/epam/htmlreporter/model/Language.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/epam/htmlreporter/model/Language.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/epam/htmlreporter/model/Measure.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/epam/htmlreporter/model/Measure.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/epam/htmlreporter/model/ProfileData.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/epam/htmlreporter/model/ProfileData.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/epam/htmlreporter/model/ProfileMetaData.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/epam/htmlreporter/model/ProfileMetaData.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/epam/htmlreporter/model/QualityGate.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/epam/htmlreporter/model/QualityGate.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/epam/htmlreporter/model/Report.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/epam/htmlreporter/model/Report.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/epam/htmlreporter/model/Rule.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/epam/htmlreporter/model/Rule.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/epam/htmlreporter/model/SonarQubeServer.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/epam/htmlreporter/model/SonarQubeServer.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/epam/htmlreporter/providers/AbstractDataProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/epam/htmlreporter/providers/IssuesProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/epam/htmlreporter/providers/LanguageProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/epam/htmlreporter/providers/MeasureProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/epam/htmlreporter/providers/ProjectProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/epam/htmlreporter/providers/QualityGateProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/epam/htmlreporter/providers/QualityProfileProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/epam/htmlreporter/providers/RequestManager.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/epam/htmlreporter/providers/RequestManager.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/epam/htmlreporter/providers/SonarQubeInfoProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/epam/htmlreporter/utils/CommandLineManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/epam/htmlreporter/utils/DisplayFormatter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/epam/htmlreporter/utils/ReportConfiguration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/epam/htmlreporter/utils/StringManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/static/report.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/report.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/static/templates/denied.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/templates/denied.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/static/templates/reportForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/templates/reportForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/template/template.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/template/template.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/htmlreporter/com/epam/htmlreporter/exporters/IExporter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/htmlreporter/com/epam/htmlreporter/exporters/IExporter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/epam/htmlreporter/exporters/IExporter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/epam/htmlreporter/providers/AbstractDataProvider.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/epam/htmlreporter/providers/AbstractDataProvider.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/epam/htmlreporter/providers/IssuesProvider.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/epam/htmlreporter/providers/IssuesProvider.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/epam/htmlreporter/providers/QualityGateProvider.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/epam/htmlreporter/providers/QualityGateProvider.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/epam/htmlreporter/providers/QualityProfileProvider.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/epam/htmlreporter/providers/QualityProfileProvider.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/epam/htmlreporter/providers/SonarQubeInfoProvider.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/epam/htmlreporter/providers/SonarQubeInfoProvider.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/epam/htmlreporter/utils/StringManager.groovy" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -100,32 +23,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/epam/htmlreporter/exporters/html/JavaUtility.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="11" column="59" selection-start-line="11" selection-start-column="59" selection-end-line="11" selection-end-column="59" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#232#233#0" expanded="true" />
-                <element signature="e#319#320#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/epam/htmlreporter/exporters/html/HTMLExporter.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="78" selection-start-line="78" selection-end-line="78" />
-              <folding>
-                <element signature="e#47#118#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/epam/htmlreporter/factory/ServerFactory.groovy">
           <provider selected="true" editor-type-id="text-editor">
@@ -138,8 +35,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/epam/htmlreporter/providers/AbstractDataProvider.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="155" column="7" selection-start-line="155" selection-start-column="7" selection-end-line="155" selection-end-column="7" />
+            <state relative-caret-position="70">
+              <caret line="264" column="49" selection-start-line="264" selection-start-column="49" selection-end-line="264" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/epam/htmlreporter/providers/QualityProfileProvider.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="119" column="35" lean-forward="true" selection-start-line="119" selection-start-column="35" selection-end-line="119" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/epam/htmlreporter/providers/QualityGateProvider.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="151">
+              <caret line="191" column="39" selection-start-line="191" selection-start-column="39" selection-end-line="191" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/epam/htmlreporter/providers/IssuesProvider.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="291">
+              <caret line="256" column="32" selection-start-line="256" selection-start-column="32" selection-end-line="256" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -157,19 +81,25 @@
         <entry file="file://$PROJECT_DIR$/src/com/epam/htmlreporter/utils/CommandLineManager.groovy">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="411">
-              <caret line="81" column="44" lean-forward="true" selection-start-line="81" selection-start-column="44" selection-end-line="81" selection-end-column="44" />
+              <caret line="81" column="44" selection-start-line="81" selection-start-column="44" selection-end-line="81" selection-end-column="44" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/epam/htmlreporter/utils/StringManager.groovy">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/epam/htmlreporter/utils/StringManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="109" column="58" selection-start-line="109" selection-start-column="58" selection-end-line="109" selection-end-column="58" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state relative-caret-position="295">
+              <caret line="168" column="4" selection-start-line="168" selection-start-column="4" selection-end-line="168" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/epam/htmlreporter/providers/SonarQubeInfoProvider.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="251">
+              <caret line="66" column="46" lean-forward="true" selection-start-line="66" selection-start-column="46" selection-end-line="66" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -179,15 +109,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="258">
               <caret line="121" column="6" selection-start-line="121" selection-start-column="6" selection-end-line="121" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/epam/htmlreporter/model/SonarQubeServer.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="88" column="16" selection-start-line="88" selection-start-column="16" selection-end-line="88" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -209,11 +130,14 @@
       <find>}</find>
       <find>getProp</find>
       <find>getProperty</find>
+      <find>'</find>
+      <find>request</find>
     </findStrings>
     <replaceStrings>
       <replace>'</replace>
       <replace>[</replace>
       <replace>]</replace>
+      <replace>&quot;</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\RD\htmlreporter</dir>
@@ -239,7 +163,6 @@
         <option value="$PROJECT_DIR$/src/com/epam/htmlreporter/providers/SonarQubeInfoProvider.java" />
         <option value="$PROJECT_DIR$/src/com/epam/htmlreporter/exporters/IExporter.java" />
         <option value="$PROJECT_DIR$/src/report.properties" />
-        <option value="$PROJECT_DIR$/src/com/epam/htmlreporter/utils/StringManager.java" />
         <option value="$PROJECT_DIR$/src/requests.properties" />
         <option value="$PROJECT_DIR$/src/messages.properties" />
         <option value="$PROJECT_DIR$/src/com/epam/htmlreporter/providers/RequestManager.groovy" />
@@ -265,10 +188,15 @@
         <option value="$PROJECT_DIR$/src/com/epam/htmlreporter/providers/MeasureProvider.java" />
         <option value="$PROJECT_DIR$/src/com/epam/htmlreporter/exporters/html/HTMLExporter.groovy" />
         <option value="$PROJECT_DIR$/src/com/epam/htmlreporter/factory/ServerFactory.groovy" />
-        <option value="$PROJECT_DIR$/src/com/epam/htmlreporter/providers/AbstractDataProvider.groovy" />
         <option value="$PROJECT_DIR$/src/com/epam/htmlreporter/factory/ReportModelFactory.groovy" />
         <option value="$PROJECT_DIR$/src/com/epam/htmlreporter/utils/CommandLineManager.groovy" />
         <option value="$PROJECT_DIR$/src/com/epam/htmlreporter/utils/StringManager.groovy" />
+        <option value="$PROJECT_DIR$/src/com/epam/htmlreporter/utils/StringManager.java" />
+        <option value="$PROJECT_DIR$/src/com/epam/htmlreporter/providers/SonarQubeInfoProvider.groovy" />
+        <option value="$PROJECT_DIR$/src/com/epam/htmlreporter/providers/IssuesProvider.groovy" />
+        <option value="$PROJECT_DIR$/src/com/epam/htmlreporter/providers/AbstractDataProvider.groovy" />
+        <option value="$PROJECT_DIR$/src/com/epam/htmlreporter/providers/QualityProfileProvider.groovy" />
+        <option value="$PROJECT_DIR$/src/com/epam/htmlreporter/providers/QualityGateProvider.groovy" />
       </list>
     </option>
   </component>
@@ -302,6 +230,13 @@
               <item name="htmlreporter" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="htmlreporter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="htmlreporter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="htmlreporter" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="htmlreporter" type="462c0819:PsiDirectoryNode" />
+              <item name="exporters" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="htmlreporter" type="b2602c69:ProjectViewProjectNode" />
@@ -420,7 +355,7 @@
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.32936078" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3488624" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -431,7 +366,7 @@
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50053304" side_tool="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Build" order="12" weight="0.32936078" />
-      <window_info active="true" anchor="bottom" id="Messages" order="13" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -491,43 +426,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/report.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="35" column="36" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/epam/htmlreporter/utils/StringManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="137" column="7" lean-forward="true" selection-start-line="137" selection-start-column="7" selection-end-line="137" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4744#4745#0" expanded="true" />
-            <element signature="e#4799#4800#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logging.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/template/template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2049" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/requests.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="554">
-          <caret line="48" column="37" selection-start-line="48" selection-start-column="37" selection-end-line="48" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/messages.properties">
       <provider editor-type-id="ResourceBundle" />
       <provider selected="true" editor-type-id="text-editor">
@@ -1084,13 +982,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/epam/htmlreporter/providers/AbstractDataProvider.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="155" column="7" selection-start-line="155" selection-start-column="7" selection-end-line="155" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/epam/htmlreporter/utils/DisplayFormatter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -1105,13 +996,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/epam/htmlreporter/utils/CommandLineManager.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="81" column="44" lean-forward="true" selection-start-line="81" selection-start-column="44" selection-end-line="81" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/util/Properties.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="258">
@@ -1119,13 +1003,72 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/htmlreporter/exporters/IExporter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="31" column="33" lean-forward="true" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/epam/htmlreporter/utils/StringManager.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="109" column="58" selection-start-line="109" selection-start-column="58" selection-end-line="109" selection-end-column="58" />
+        <state relative-caret-position="371">
+          <caret line="190" column="23" lean-forward="true" selection-start-line="190" selection-start-column="23" selection-end-line="190" selection-end-column="23" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/htmlreporter/utils/CommandLineManager.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="81" column="44" selection-start-line="81" selection-start-column="44" selection-end-line="81" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/htmlreporter/utils/StringManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="168" column="4" selection-start-line="168" selection-start-column="4" selection-end-line="168" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/htmlreporter/providers/SonarQubeInfoProvider.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="66" column="46" lean-forward="true" selection-start-line="66" selection-start-column="46" selection-end-line="66" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/htmlreporter/providers/IssuesProvider.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="256" column="32" selection-start-line="256" selection-start-column="32" selection-end-line="256" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/htmlreporter/providers/AbstractDataProvider.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="264" column="49" selection-start-line="264" selection-start-column="49" selection-end-line="264" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/htmlreporter/providers/QualityProfileProvider.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="119" column="35" lean-forward="true" selection-start-line="119" selection-start-column="35" selection-end-line="119" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/epam/htmlreporter/providers/QualityGateProvider.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="191" column="39" selection-start-line="191" selection-start-column="39" selection-end-line="191" selection-end-column="39" />
         </state>
       </provider>
     </entry>

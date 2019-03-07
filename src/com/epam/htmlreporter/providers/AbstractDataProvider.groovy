@@ -259,10 +259,10 @@ public abstract class AbstractDataProvider {
      * @throws BadSonarQubeRequestException if SonarQube Server sent an error
      * @throws SonarQubeException When SonarQube server is not callable.
      */
-    public JsonObject request(final String request)
+    public JsonObject request(final String request1)
             throws BadSonarQubeRequestException, SonarQubeException {
         // do the request to the server and return a string answer
-        final String raw = stringRequest(request);
+        final String raw = stringRequest(request1);
 
         // prepare json
         JsonElement json = null;

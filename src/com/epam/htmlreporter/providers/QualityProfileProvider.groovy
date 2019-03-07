@@ -60,10 +60,10 @@ public class QualityProfileProvider extends AbstractDataProvider {
         final List<QualityProfile> res = new ArrayList<>();
 
         // Get all quality profiles (metadata)
-        String request = String.format(getRequest(GET_QUALITY_PROFILES_REQUEST),
+        String request1 = String.format(getRequest(GET_QUALITY_PROFILES_REQUEST),
                 getServer().getUrl(), getProjectKey(), pOrganization);
         // perform the previous request
-        JsonObject jo = request(request);
+        JsonObject jo = request(request1);
 
         // Get quality profiles resources
         final ProfileMetaData[] metaData = (getGson().fromJson(
@@ -71,14 +71,14 @@ public class QualityProfileProvider extends AbstractDataProvider {
         for (ProfileMetaData profileMetaData : metaData) {
             final ProfileData profileData = new ProfileData();
             // get configuration
-            request = String.format(getRequest(GET_QUALITY_PROFILES_CONF_REQUEST),
+            request1 = String.format(getRequest(GET_QUALITY_PROFILES_CONF_REQUEST),
                     getServer().getUrl(),
                     profileMetaData.getLanguage().replaceAll(String.valueOf(StringManager.SPACE),
                     StringManager.URI_SPACE),
                     profileMetaData.getName().replaceAll(String.valueOf(StringManager.SPACE),
                     StringManager.URI_SPACE));
             // perform request to sonarqube server
-            final String xml = stringRequest(request);
+            final String xml = stringRequest(request1);
             // add configuration as string to the profile
             profileData.setConf(xml);
 
@@ -96,11 +96,11 @@ public class QualityProfileProvider extends AbstractDataProvider {
             // continue until there are no more results
             while(goon) {
                 // prepare the request
-                request = String.format(getRequest(GET_QUALITY_PROFILES_RULES_REQUEST),
+                request1 = String.format(getRequest(GET_QUALITY_PROFILES_RULES_REQUEST),
                         getServer().getUrl(), profileKey,
                         Integer.valueOf(getRequest(MAX_PER_PAGE_SONARQUBE)), page);
                 // perform the previous request to sonarqube server
-                jo = request(request);
+                jo = request(request1);
                 // convert json to Rule objects
                 final Rule [] tmp = (getGson().fromJson(jo.get(RULES), Rule[].class));
                 // add rules to the result list
@@ -114,10 +114,10 @@ public class QualityProfileProvider extends AbstractDataProvider {
             profileData.setRules(rules);
 
             // get projects linked to the profile
-            request = String.format(getRequest(GET_QUALITY_PROFILES_PROJECTS_REQUEST),
+            request1 = String.format(getRequest(GET_QUALITY_PROFILES_PROJECTS_REQUEST),
                     getServer().getUrl(), profileMetaData.getKey());
             // perform a request
-            jo = request(request);
+            jo = request(request1);
             // convert json to Project objects
             final Project[] projects = (getGson().fromJson(jo.get(RESULTS), Project[].class));
 
