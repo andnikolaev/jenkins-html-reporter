@@ -18,51 +18,57 @@
 package com.epam.htmlreporter.model;
 
 /**
- * An analyzed language of sonarqube
+ * A simple pair
  */
-public class Language {
-    /** Language's key */
-    private String key;
-    /** Language's name*/
-    private String name;
+public class Value {
+    /**
+     * Value to count
+     */
+    private String val;
+    /**
+     * Number of occurrences
+     */
+    private int count;
 
     /**
-     * Default constructor
+     * Complete constructor
+     * @param pVal value to give to val
+     * @param pCount value to give to count
      */
-    public Language() {
-        this.key = "";
-        this.name = "";
+    public Value(final String pVal, final int pCount) {
+        this.val = pVal;
+        this.count = pCount;
     }
 
     /**
-     * Language's key
-     * @return a string
+     * Getter for val
+     * @return val
      */
-    public String getKey() {
-        return key;
+    public String getVal() {
+        return val;
     }
 
     /**
-     * Set language's key
-     * @param pKey value to set
+     * Setter for val
+     * @param pVal value to give to val
      */
-    public void setKey(final String pKey) {
-        this.key = pKey;
+    public void setVal(final String pVal) {
+        this.val = pVal;
     }
 
     /**
-     * Language's name
-     * @return a String
+     * Getter for count
+     * @return count
      */
-    public String getName() {
-        return name;
+    public int getCount() {
+        return count;
     }
 
     /**
-     * Set language's name
-     * @param pName value to set
+     * Setter to give to count
+     * @param pCount count
      */
-    public void setName(final String pName) {
-        this.name = pName;
+    public void setCount(final int pCount) {
+        this.count = pCount;
     }
 }
