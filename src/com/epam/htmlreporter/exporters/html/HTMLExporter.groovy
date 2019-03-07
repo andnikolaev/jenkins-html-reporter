@@ -2,8 +2,8 @@ package com.epam.htmlreporter.exporters.html;
 
 import com.epam.htmlreporter.exceptions.BadExportationDataTypeException;
 import com.epam.htmlreporter.exporters.IExporter
-import com.epam.htmlreporter.model.Issue;
-import com.epam.htmlreporter.model.Report
+import com.epam.htmlreporter.model.Issue
+import com.epam.htmlreporter.model.Report;
 import com.hp.gagawa.java.elements.Div
 
 import java.nio.charset.Charset;
@@ -16,7 +16,6 @@ import java.nio.charset.Charset;
 //@Grab(group = 'commons-io', module = 'commons-io', version = '2.4')
 import org.apache.commons.io.IOUtils
 import org.apache.commons.io.FileUtils
-import java.util.stream.Collectors;
 
 public class HTMLExporter implements IExporter {
 

@@ -12,7 +12,6 @@ import com.epam.htmlreporter.model.SonarQubeServer
 import com.epam.htmlreporter.utils.ReportConfiguration
 
 import java.util.logging.Level
-import java.util.logging.LogManager
 import java.util.logging.Logger
 
 public final class Reporter {

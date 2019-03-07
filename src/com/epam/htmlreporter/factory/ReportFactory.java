@@ -23,11 +23,9 @@ import com.epam.htmlreporter.model.Report;
 import com.epam.htmlreporter.utils.ReportConfiguration;
 import com.epam.htmlreporter.utils.StringManager;
 
-import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Iterator;
 import java.util.logging.Logger;
 
 public class ReportFactory {
